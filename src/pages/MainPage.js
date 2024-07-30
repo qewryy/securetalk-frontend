@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import '../index.css'; // Make sure to import your CSS file
+import './css/MainPage.css'; // CSS 파일 경로 수정
 
 function MainPage() {
   return (

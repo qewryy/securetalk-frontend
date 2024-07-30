@@ -1,4 +1,4 @@
-/* RegisterPage.css */
+/* MainPage.css */
 .container-main {
     max-width: 800px;
     margin: 0 auto;
@@ -6,15 +6,5 @@
     background-color: #f8f9fa;
     min-height: calc(100vh - 160px); /* Adjusted for header and footer height */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .register-btn {
-    background-color: #28a745;
-    border-color: #28a745;
-  }
-  
-  .register-btn:hover {
-    background-color: #218838;
-    border-color: #218838;
   }
   

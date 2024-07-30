@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Form, Button } from 'react-bootstrap';
 import { FaUser, FaLock } from 'react-icons/fa';
-import './LoginPage.css';
+import './css/LoginPage.css'; // CSS 파일 경로 수정
 
 function LoginPage() {
   const [username, setUsername] = useState('');

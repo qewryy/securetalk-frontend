@@ -11,8 +11,13 @@ function AppNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/login">Login</Nav.Link>
             <Nav.Link as={Link} to="/register">Register</Nav.Link>
+            <Nav.Link as={Link} to="/posts">Community Posts</Nav.Link>
+            <Nav.Link as={Link} to="/posts/new">Write a Post</Nav.Link>
+            <Nav.Link as={Link} to="/posts/:id">Post Detail</Nav.Link>
+            <Nav.Link as={Link} to="/posts/:id/edit">Edit Post</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

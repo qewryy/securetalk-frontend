@@ -1,0 +1,10 @@
+/* EditPost.css */
+.container-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 160px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Form, Button } from 'react-bootstrap';
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
-import './RegisterPage.css';
+import './css/RegisterPage.css';
 
 function RegisterPage() {
   const [username, setUsername] = useState('');
