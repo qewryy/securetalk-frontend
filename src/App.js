@@ -1,15 +1,19 @@
 import React from 'react';
-import UserForm from './components/UserForm';
-import UserList from './components/UserList';
+import { Routes, Route } from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
-    return (
-        <div className="App">
-            <h1>SecureTalk</h1>
-            <UserForm />
-            <UserList />
-        </div>
-    );
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
