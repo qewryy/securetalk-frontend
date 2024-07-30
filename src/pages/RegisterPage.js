@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Container, Form, Button } from 'react-bootstrap';
+import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
+import './RegisterPage.css';
 
 function RegisterPage() {
   const [username, setUsername] = useState('');
@@ -21,24 +24,41 @@ function RegisterPage() {
   };
 
   return (
-    <div>
+    <Container className="container-main mt-5">
       <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </div>
-        <button type="submit">Register</button>
-      </form>
-    </div>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="formUsername">
+          <Form.Label><FaUser /> Username</Form.Label>
+          <Form.Control 
+            type="text" 
+            value={username} 
+            onChange={(e) => setUsername(e.target.value)} 
+            placeholder="Enter username" 
+          />
+        </Form.Group>
+        <Form.Group controlId="formPassword">
+          <Form.Label><FaLock /> Password</Form.Label>
+          <Form.Control 
+            type="password" 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            placeholder="Enter password" 
+          />
+        </Form.Group>
+        <Form.Group controlId="formEmail">
+          <Form.Label><FaEnvelope /> Email</Form.Label>
+          <Form.Control 
+            type="email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            placeholder="Enter email" 
+          />
+        </Form.Group>
+        <Button variant="primary" type="submit" className="mt-3 register-btn">
+          Register
+        </Button>
+      </Form>
+    </Container>
   );
 }
 
