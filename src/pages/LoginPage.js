@@ -5,8 +5,8 @@ import { FaUser, FaLock } from 'react-icons/fa';
 import './css/LoginPage.css';
 import { useNavigate } from 'react-router-dom';
 
-function LoginPage() {
-  const [username, setUsername] = useState('');
+function LoginPage({ setUsername }) {
+  const [username, setLocalUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
@@ -16,12 +16,11 @@ function LoginPage() {
     axios.post('/users/login', user)
       .then(response => {
         alert('Login successful');
+        setUsername(username);  // 상태 업데이트
         navigate('/'); // 메인 페이지로 리디렉션
-        window.location.reload(); // 페이지 새로 고침
       })
       .catch(error => {
         alert('Login failed: ' + error.response.data);
-        window.location.reload(); // 페이지 새로 고침
       });
   };
 
@@ -34,7 +33,7 @@ function LoginPage() {
           <Form.Control 
             type="text" 
             value={username} 
-            onChange={(e) => setUsername(e.target.value)} 
+            onChange={(e) => setLocalUsername(e.target.value)} 
             placeholder="Enter username" 
           />
         </Form.Group>
