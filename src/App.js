@@ -11,7 +11,7 @@ import ProfilePage from './pages/ProfilePage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import AdminPage from './pages/AdminPage';  // AdminPage 컴포넌트 추가
 import Footer from './components/Footer';
-import AppNavbar from './components/Navbar';
+import AppNavbar from './components/AppNavbar';
 
 function App() {
   return (

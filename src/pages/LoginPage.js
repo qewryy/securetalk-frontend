@@ -2,23 +2,25 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Form, Button } from 'react-bootstrap';
 import { FaUser, FaLock } from 'react-icons/fa';
-import './css/LoginPage.css'; // CSS 파일 경로 수정
+import './css/LoginPage.css';
+import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const user = { username, password };
     axios.post('http://localhost:8080/api/users/login', user)
       .then(response => {
-        console.log(response.data);
-        // 로그인 성공 시 처리
+        alert('Login successful');
+        navigate('/'); // 메인 페이지로 리디렉션
       })
       .catch(error => {
-        console.error(error);
-        // 로그인 실패 시 처리
+        alert('Login failed: ' + error.response.data);
+        window.location.reload(); // 페이지 새로 고침
       });
   };
 
