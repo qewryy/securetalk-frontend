@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Container } from 'react-bootstrap';
-import './css/MainPage.css';
+import './css/MainPage.css'; // CSS 파일 경로 수정
 
 function MainPage() {
   const [username, setUsername] = useState(null);
@@ -22,6 +22,7 @@ function MainPage() {
       <Container className="container-main mt-5">
         <h1>Welcome to SecureTalk</h1>
         <p>This is a secure community platform.</p>
+        <p>{username}</p>
         {username ? (
           <p>Welcome, {username}!</p>
         ) : (

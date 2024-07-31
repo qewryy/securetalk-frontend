@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import axios from '../api/axios';
 import { Container, Form, Button } from 'react-bootstrap';
 import { FaUser, FaLock } from 'react-icons/fa';
 import './css/LoginPage.css';
@@ -13,10 +13,11 @@ function LoginPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const user = { username, password };
-    axios.post('http://localhost:8080/api/users/login', user)
+    axios.post('/users/login', user)
       .then(response => {
         alert('Login successful');
         navigate('/'); // 메인 페이지로 리디렉션
+        window.location.reload(); // 페이지 새로 고침
       })
       .catch(error => {
         alert('Login failed: ' + error.response.data);
