@@ -18,8 +18,9 @@ function AppNavbar() {
             <Nav.Link as={Link} to="/posts/new">Write a Post</Nav.Link>
             <Nav.Link as={Link} to="/posts/:id">Post Detail</Nav.Link>
             <Nav.Link as={Link} to="/posts/:id/edit">Edit Post</Nav.Link>
-            <Nav.Link as={Link} to="/profile">Profile</Nav.Link>  {/* ProfilePage 링크 추가 */}
-            <Nav.Link as={Link} to="/reset-password">Reset Password</Nav.Link>  {/* ResetPasswordPage 링크 추가 */}
+            <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
+            <Nav.Link as={Link} to="/reset-password">Reset Password</Nav.Link>
+            <Nav.Link as={Link} to="/admin">Admin</Nav.Link>  {/* AdminPage 링크 추가 */}
           </Nav>
         </Navbar.Collapse>
       </Container>
